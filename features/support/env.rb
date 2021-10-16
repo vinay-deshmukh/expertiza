@@ -5,7 +5,9 @@ require 'rspec'
 require 'byebug'
 
 Capybara.run_server = false
-#Set default driver as Selenium
+# For GUI-based firefox
+# Capybara.default_driver = :selenium
+# For headless chrome
 Capybara.default_driver = :selenium_chrome_headless
 #Set default selector as css
 Capybara.default_selector = :css

@@ -3,7 +3,7 @@
 To run cucumber tests,
 
 ```
-cucumber features/
+cucumber
 ```
 
 You need to be in a GUI environement for the default configuration to work properly.
