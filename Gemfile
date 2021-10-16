@@ -103,6 +103,7 @@ group :test do
 end
 
 group :development, :test do
+  gem 'cucumber'
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
