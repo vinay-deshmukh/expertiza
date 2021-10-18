@@ -93,6 +93,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'gherkin'
+  gem 'cucumber-rails', require: false
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'launchy'

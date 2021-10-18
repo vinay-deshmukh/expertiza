@@ -1,14 +1,15 @@
+require 'cucumber/rails'
 require 'rubygems'
 require 'capybara'
 require 'capybara/dsl'
 require 'rspec'
-require 'byebug'
+# require 'byebug'
 
 Capybara.run_server = false
 # For GUI-based firefox
-# Capybara.default_driver = :selenium
+Capybara.default_driver = :selenium
 # For headless chrome
-Capybara.default_driver = :selenium_chrome_headless
+# Capybara.default_driver = :selenium_chrome_headless
 #Set default selector as css
 Capybara.default_selector = :css
 
