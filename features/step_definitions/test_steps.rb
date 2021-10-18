@@ -25,32 +25,36 @@ Then(/^I will wait for (\d+) seconds$/) do |waitTime|
     sleep (waitTime.to_i)
 end
 
-
-Given("I am on the assignment {int} edit page") do |assignment_id|
+Given(/^I am on the assignment (\d+) edit page$/) do |assignment_id|
 #   pending # Write code here that turns the phrase above into concrete actions
 #   visit "/assignments/#{assignment_id}/edit"
-  visit "/assignments/"
+  visit "/assignments/95/edit"
+#   visit "/assignments/"
 end
 
 When(/I switch to (.*) tab/) do |s|
-    # if s == "Due Dates"
-        click_link(s)
-    # end
+    click_link(s)
 end
 
-When("I click on {string}") do |str|
+
+When(/^I click on "([^"]*)"$/) do |str|
     click(str)
 end
 
-Then("I should be on {string}") do |string|
+When("I click on {string}") do |str|
+end
+
+Then(/^I should be on "([^"]*)"$/) do |string|
     expect(page).to have_current_path(string)
 end
 
-When("I fill in {string} with {string}") do |name, value|
+
+When(/^I fill in "([^"]*)" with "([^"]*)"$/) do |name, value|
   fill_in name, :with => value
 end
 
-Then("see {string}") do |string|
-  pending # Write code here that turns the phrase above into concrete actions
+
+Then(/^see "([^"]*)"$/) do |arg1|
+#   pending # Write code here that turns the phrase above into concrete actions
   expect(page).to have_content(string)
 end
