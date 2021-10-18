@@ -5,7 +5,7 @@ require 'capybara/dsl'
 require 'rspec'
 # require 'byebug'
 
-Capybara.run_server = false
+Capybara.run_server = true
 # For GUI-based firefox
 Capybara.default_driver = :selenium
 # For headless chrome
